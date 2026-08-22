@@ -43,6 +43,8 @@ This audit became the reference point for the redesign: design decisions could b
   <img src="LDB_analysis.gif" alt="analysis" width="1000"/>
 </p>
 
+<br>
+
 ### 2. Understanding Who LicenseDB Is Designed For
 
 Since LicenseDB supports people with very different levels of licensing knowledge, I mapped its users into four broad groups: **License/Compliance Admins, Licensing Specialists, Developers, and Maintainers/Contributors**.
@@ -52,6 +54,8 @@ Their priorities differ considerably. An administrator may need to verify metada
 Mapping these differences helped identify where the interface needed to provide depth without making every workflow equally complex. The research highlighted issues such as difficult license comparison, duplicated records, dense legal information, poor discoverability, complex navigation, and repetitive maintenance work.
 
 From these findings, I defined the main priorities for the redesign: improve navigation, make large datasets easier to explore, strengthen hierarchy, make actions and system states clearer, simplify creation and editing flows, improve comparison, and establish consistent interaction patterns throughout LicenseDB.
+
+<br>
 
 ### 3. Extending the FOSSology Design System for LicenseDB
 
@@ -73,45 +77,25 @@ The new icons extended the shared library without creating a separate visual lan
 
 - [LicenseDB Icons](LINK_TO_PULL_REQUEST)
 
+<br>
+
 ### 4. Building the New LicenseDB Experience
 
-The redesigned experience was developed around complete workflows rather than isolated screens. Along with the primary states, I designed interactions such as collapsed navigation, applied filters, confirmation dialogs, comparison states, similar-record detection, and expanded/collapsed change history.
+The LicenseDB redesign covered its core workflows while focusing on clearer navigation, better organization of dense information, and more consistent interactions. Rather than designing individual screens in isolation, related workflows were considered together, including their different states and edge cases.
 
-#### Navigation and Dashboard
+Across the interface, navigation was simplified, data-heavy pages were made easier to explore through improved search, sorting and filtering, and administrative workflows were made more consistent through shared patterns. Forms and detailed views were reorganized to create clearer information hierarchy, while status, risk, and classification information was presented in a more understandable way.
 
-The navigation was redesigned to work in both expanded and collapsed states. When collapsed, users could still access the complete menu through an overlay, allowing more horizontal space to be dedicated to content without removing access to navigation.
+<p align="center">
+  <img src="Main_nav.gif" alt="Nav" width="1000"/>
+</p>
 
-The Dashboard was reorganized around the information users are most likely to need at a glance. Licenses, obligations, users, and license changes were surfaced as summary cards with direct links into the corresponding sections. Recent activity and license-risk information were also reorganized to make the page more useful as an entry point rather than simply a collection of statistics.
+More complex workflows also introduced new interactions such as similar-license and similar-obligation detection, side-by-side license comparison, confirmation for destructive actions, and an expandable change history with diff-style text comparison. These additions were designed to bring relevant information into the user’s current workflow while reducing unnecessary navigation and making complex license-management tasks easier to understand.
 
-#### Users and Client Management
+<p align="center">
+  <img src="Pages.gif" alt="pages" width="1000"/>
+</p>
 
-User and client administration were given a shared interaction model. Both areas use structured lists with clear primary actions, while creation is handled through focused modal dialogs.
-
-For Users, the creation flow brings together username, display name, email, password, and access level. Manage Clients follows a similar pattern for client information. Reusing the interaction model across administrative areas makes these workflows easier to learn and avoids introducing different behavior for closely related tasks.
-
-#### License Management
-
-The License area required the most extensive set of designs. It covered the **License List, License Detail, Add License, Edit License, Delete License, and Compare Licenses** workflows.
-
-The list experience was redesigned around faster exploration of a large dataset. Search was made easier to locate, sorting and filtering were introduced more clearly, active filters remained visible, and risk information was presented as a readable status rather than an ambiguous control.
-
-Create and edit workflows were reorganized so that metadata, status information, obligations, acknowledgement text, and license text could be handled within a clearer hierarchy. I also designed a similar-license detection state that surfaces possible matches while the user is working with license text. Instead of requiring a contributor to manually leave the form and search for duplicates, relevant existing records can be brought into the current context.
-
-License deletion was separated into a confirmation interaction to reduce accidental destructive actions.
-
-The Compare Licenses experience addressed another recurring research finding: understanding differences between licenses can be difficult when information has to be inspected independently. The redesigned flow lets users select licenses and inspect their details side-by-side, while also supporting states where another license still needs to be added.
-
-#### Obligation Management
-
-Obligations were redesigned with a structure consistent with the License experience while accounting for their own metadata and workflows. The work included the **Obligation List, Obligation Detail, Add Obligation, and Edit Obligation** screens.
-
-Information such as type, classification, category, status, assigned licenses, source information, and full text was reorganized to make the forms easier to scan. The add and edit experiences also include similar-obligation detection, bringing potentially related records into the workflow before a user completes an update or creates a duplicate.
-
-#### Change History
-
-I also designed a new way to inspect historical changes. Because change logs can become extremely detailed particularly when license text changes—the interface uses accordions to reveal information progressively.
-
-Users can keep sections collapsed when they only need an overview or expand individual fields when they need the exact details. Text changes use a diff-style presentation so that previous and updated values can be compared more easily.
+<br>
 
 ### 5. Completing the Remaining FOSSology Work
 
@@ -165,7 +149,7 @@ Implementation will also introduce opportunities to review accessibility in the 
 
 ## Acknowledgements
 
-I would like to thank my mentors and everyone in the FOSSology community who supported me throughout GSoC 2026. Their feedback helped me understand LicenseDB beyond what was visible in the interface from how its information is used to the edge cases and dependencies behind different workflows.
+I would like to thank my mentors [Katharina Ettinger](https://www.linkedin.com/in/katharina-ettinger-82055019/) and [Shaheem Azmal M MD.](https://www.linkedin.com/in/shaheem-azmal-m-md-71604429/), and everyone in the FOSSology community who supported me throughout GSoC 2026. Their feedback helped me understand LicenseDB beyond what was visible in the interface from how its information is used to the edge cases and dependencies behind different workflows.
 
 Returning to FOSSology for another GSoC also gave me the opportunity to approach this project with the context I had built previously while still working through a very different design problem. LicenseDB pushed me to think more deeply about dense information, administrative workflows, comparison, and designing for users with different levels of domain knowledge.
 
