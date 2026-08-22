@@ -2,8 +2,8 @@
   <img src="Intro_bg_ldb.png" alt="Intro" width="1000"/>
 </p>
 
-<div align = "center"><h1>FOSSology UX and UI Redesign </h1>
-<h2> <a href = "https://summerofcode.withgoogle.com/programs/2025/projects/gX6omKmk"> GSoC-2025 </a> @ <a href = "https://www.fossology.org/">FOSSology </a> </h2></div>
+<div align = "center"><h1>FOSSology & LicenseDb UX and UI design </h1>
+<h2> <a href = "https://summerofcode.withgoogle.com/programs/2025/projects/gX6omKmk"> GSoC-2026 </a> @ <a href = "https://www.fossology.org/">FOSSology </a> </h2></div>
 
 <p align="center">
 	<a href="#project-overview">Project Overview</a> | 
@@ -19,7 +19,7 @@
 
 My GSoC 2026 work was primarily centered around **LicenseDB**, with the aim of rethinking its interface and making its workflows clearer, more efficient, and easier to navigate. Once the LicenseDB redesign was completed, I worked on the remaining FOSSology pages that were left from my previous design work.
 
-LicenseDB presents a different UX challenge from many of the FOSSology workflows I had worked on earlier. A large part of the interface revolves around managing and reviewing structured information—licenses, obligations, users, clients, classifications, and historical changes—along with long-form legal text. This made information hierarchy, discoverability, comparison, and the handling of dense data especially important.
+LicenseDB presents a different UX challenge from many of the FOSSology workflows I had worked on earlier. A large part of the interface revolves around managing and reviewing structured information licenses, obligations, users, clients, classifications, and historical changes along with long-form legal text. This made information hierarchy, discoverability, comparison, and the handling of dense data especially important.
 
 My work covered the complete design process, starting with studying the existing product and identifying usability and accessibility concerns, followed by defining the key improvements and redesigning the required workflows. I also explored alternate states and edge cases instead of limiting the work to ideal-state screens. Throughout the project, the design system was expanded wherever LicenseDB introduced patterns that were not already covered.
 
@@ -109,7 +109,7 @@ Information such as type, classification, category, status, assigned licenses, s
 
 #### Change History
 
-I also designed a new way to inspect historical changes. Because change logs can become extremely detailed—particularly when license text changes—the interface uses accordions to reveal information progressively.
+I also designed a new way to inspect historical changes. Because change logs can become extremely detailed particularly when license text changes—the interface uses accordions to reveal information progressively.
 
 Users can keep sections collapsed when they only need an overview or expand individual fields when they need the exact details. Text changes use a diff-style presentation so that previous and updated values can be compared more easily.
 
@@ -124,22 +124,14 @@ This helped bring the remaining pages into the redesigned FOSSology experience w
 ## Deliverables
 
 | Deliverable | Status | Link |
-
 | --- | --- | --- |
-
-| Main Navigation | Completed | [Main Navigation pages on Figma](FIGMA_LINK) |
-
-| Dashboard | Completed | [Dashboard pages on Figma](FIGMA_LINK) |
-
-| User Pages | Completed | [User pages on Figma](FIGMA_LINK) |
-
-| Manage Clients Pages | Completed | [Manage Clients pages on Figma](FIGMA_LINK) |
-
-| License Pages | Completed | [License pages on Figma](FIGMA_LINK) |
-
-| Obligation Pages | Completed | [Obligation pages on Figma](FIGMA_LINK) |
-
-| Change Log Pages | Completed | [Change Log pages on Figma](FIGMA_LINK) |
+| Main Navigation | Completed | [Main Navigation pages on Figma](https://www.figma.com/design/6sB6F8cd9BwxUpVREfWj1j/License-Db-redesign?node-id=381-7894&t=1C61vGHfLq4q4Zjm-4) |
+| Dashboard | Completed | [Dashboard pages on Figma](https://www.figma.com/design/6sB6F8cd9BwxUpVREfWj1j/License-Db-redesign?node-id=381-7893&t=1C61vGHfLq4q4Zjm-4) |
+| User Pages | Completed | [User pages on Figma](https://www.figma.com/design/6sB6F8cd9BwxUpVREfWj1j/License-Db-redesign?node-id=381-7892&t=1C61vGHfLq4q4Zjm-4) |
+| Manage Clients Pages | Completed | [Manage Clients pages on Figma](https://www.figma.com/design/6sB6F8cd9BwxUpVREfWj1j/License-Db-redesign?node-id=385-7895&t=1C61vGHfLq4q4Zjm-4) |
+| License Pages | Completed | [License pages on Figma](https://www.figma.com/design/6sB6F8cd9BwxUpVREfWj1j/License-Db-redesign?node-id=385-7896&t=1C61vGHfLq4q4Zjm-4) |
+| Obligation Pages | Completed | [Obligation pages on Figma](https://www.figma.com/design/6sB6F8cd9BwxUpVREfWj1j/License-Db-redesign?node-id=385-7897&t=1C61vGHfLq4q4Zjm-4) |
+| Change Log Pages | Completed | [Change Log pages on Figma](https://www.figma.com/design/6sB6F8cd9BwxUpVREfWj1j/License-Db-redesign?node-id=385-7898&t=1C61vGHfLq4q4Zjm-4) |
 
 <br>
 
@@ -157,7 +149,7 @@ Implementation will also introduce opportunities to review accessibility in the 
 
 - I developed a better understanding of how heuristic evaluation can move beyond identifying problems and directly inform redesign priorities.
 
-- Working with license and obligation information reinforced the importance of progressive disclosure—showing enough information for a decision without overwhelming users with every detail at once.
+- Working with license and obligation information reinforced the importance of progressive disclosure showing enough information for a decision without overwhelming users with every detail at once.
 
 - Designing similarity detection and comparison workflows made me think more deeply about bringing relevant information into the user's current context instead of requiring additional navigation.
 
@@ -173,7 +165,7 @@ Implementation will also introduce opportunities to review accessibility in the 
 
 ## Acknowledgements
 
-I would like to thank my mentors and everyone in the FOSSology community who supported me throughout GSoC 2026. Their feedback helped me understand LicenseDB beyond what was visible in the interface—from how its information is used to the edge cases and dependencies behind different workflows.
+I would like to thank my mentors and everyone in the FOSSology community who supported me throughout GSoC 2026. Their feedback helped me understand LicenseDB beyond what was visible in the interface from how its information is used to the edge cases and dependencies behind different workflows.
 
 Returning to FOSSology for another GSoC also gave me the opportunity to approach this project with the context I had built previously while still working through a very different design problem. LicenseDB pushed me to think more deeply about dense information, administrative workflows, comparison, and designing for users with different levels of domain knowledge.
 
