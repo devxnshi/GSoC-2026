@@ -75,7 +75,7 @@ The new icons extended the shared library without creating a separate visual lan
 
 **Pull Request**
 
-- [LicenseDB Icons](LINK_TO_PULL_REQUEST)
+- [LicenseDB Icons](https://github.com/fossology/LicenseDb-UI/pull/123)
 
 <br>
 
